@@ -11,7 +11,7 @@ Arguments are:
 
 This is (usually) called from vim bindings, rather than the command line.
 
-For this to work, it requires some conventions-over-configurations.
+For this to work, it requires some convention-over-configuration.
 
 Puzzles are grouped in one day per file, named "dayNN.rb", where NN is the day
 of the calendar (prepended with 0 if necessary).
@@ -21,6 +21,15 @@ dayNN_test.txt", depending on whether the data is real data or test data.
 
 Puzzles are each contained in their own methods, called `part_one` and
 `part_two`.
+
+Data is normally read by the test runner and passed to `part_one` and `part_two`
+as parameters. Data is usually represented as an array of strings, each string
+corresponding to a line of text from the data file.
+
+If there is a `transform_data` method in the source file, it is called first. It takes
+the normal lines of data, and emits the data in whatever format makes sense for
+the puzzle. There is no need to call `transform_data` directly; the runner will
+do that before invoking the puzzle methods.
 
 
 ## Vim notes

@@ -1,0 +1,7 @@
+Day 01
+
+Wasn't feeling well, so missed the start. Puzzle was straightforward, although I
+bobbled a little on the project setup from last year. Going to try and document
+a little better, so maybe next year it's not a big surprise. Rails has a nice
+Array#split method that would have been great here, but it's not part of stock
+Ruby. Perhaps I should start building my own library of this kind of thing.
