@@ -1,4 +1,10 @@
-Day 01
+## Day 02
+
+Using lookup tables feels a little like cheating, and would not be sustainable
+with a larger data set. But for this, it works. With tables, there is no real
+logic, just loop through the input and lookup on the tables.
+
+## Day 01
 
 Wasn't feeling well, so missed the start. Puzzle was straightforward, although I
 bobbled a little on the project setup from last year. Going to try and document
