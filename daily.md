@@ -1,3 +1,10 @@
+## Day 03
+
+Took too long looking up how to do dumb things like turn a string into an array,
+a letter into its ascii value, and intersections of arrays. (I originally had a
+brute force looping construct for part one, when Array#intersection does the
+job.
+
 ## Day 02
 
 Using lookup tables feels a little like cheating, and would not be sustainable
