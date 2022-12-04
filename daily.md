@@ -1,3 +1,9 @@
+## Day 04
+
+Got a late start. Which is too bad, because the puzzle was pretty easy, and I
+got it done pretty quick. Not competitively quick, of course, but still fast by
+our local group's standards.
+
 ## Day 03
 
 Took too long looking up how to do dumb things like turn a string into an array,
