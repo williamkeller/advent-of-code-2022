@@ -39,7 +39,7 @@ def run(options)
   puzzle = "part_%s" % ((options[:p] == 1) ? 'one' : 'two')
   datafile = data_file_name(options)
 
-  data = File.readlines(datafile).map(&:strip)
+  data = File.readlines(datafile)  # .map(&:strip)
 
   require_relative source
 

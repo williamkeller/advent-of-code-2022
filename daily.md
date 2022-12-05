@@ -1,3 +1,16 @@
+## Day 06
+
+Pretty easy. My best showing so far on the global leaderboard: 4396th place!
+
+## Day 05
+
+Wasted a lot of time parsing the initial stack diagram. It seems like most
+people crunched that by hand, and then did parsing for the rest of the input. On
+the plus side, my solution will work with anyone's input, no ahnd-crunching
+required. Also had a problem where the runner was stripping off whitespace in
+the stack diagram, which was causing failures. Need to keep an eye on if
+changing the runner breaks anything else.
+
 ## Day 04
 
 Got a late start. Which is too bad, because the puzzle was pretty easy, and I
