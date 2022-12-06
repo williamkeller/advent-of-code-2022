@@ -10,7 +10,7 @@ String#chars
 
 ```
 # Find the common elements in two arrays
-Array#interaction(Array)
+Array#intersection(Array)
 ```
 
 ```
