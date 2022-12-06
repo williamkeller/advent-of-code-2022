@@ -23,3 +23,12 @@ String#ord
 # Iterating over ranges within an array
 Array.each_slice(stepn) do |var1, var2, varn|
 ```
+
+```
+# Regular expression global variables
+$~ is Regexp.last_match;
+$& is Regexp.last_match[ 0 ];
+$1, $2, and so on are Regexp.last_match[ i ] (captures by number);
+$` is Regexp.last_match.pre_match;
+$' is Regexp.last_match.post_match;
+$+ is Regexp.last_match[ -1 ] (the last capture).
