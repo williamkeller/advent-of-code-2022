@@ -1,3 +1,30 @@
+## Day 10
+
+Intcode flashbacks!
+
+Another case where part two was a little more complicated. For some reason, I
+really struggled with off-by-one problems.
+
+## Day 09
+
+I thought I was being clever, with my move lookup table. I'm not sure if anyone
+else approached it that way, I need to look at some other solutions.
+
+Part two kind of tricked me. My original plan was for a single object that
+represented both the head and tail of the rope. Switching to ten knots made for
+a more general solution, that still worked for part one.
+
+## Day 08
+
+Straightforward, no real issues.
+
+## Day 07
+
+Went the wrong way on this one, and had to back up and retool. My first stab was
+to process the data list recursively. It worked, but required a lot of fiddly
+linkage between recursive steps. Better - in this case - to read the whole tree
+into memory and then walk it normally.
+
 ## Day 06
 
 Pretty easy. My best showing so far on the global leaderboard: 4396th place!

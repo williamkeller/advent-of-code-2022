@@ -34,13 +34,10 @@ class Forest
       distance += 1
       if data[next_tree][0] >= tree_height
         line_of_sight = false
-        puts 'breaking'
         break
       end
 
-      puts 'did break get hit?'
       next_tree -= width
-      # distance += 1
     end
 
     data[start][2] *= distance
@@ -52,21 +49,15 @@ class Forest
     tree_height = data[start][0]
     next_tree = start - 1
     edge = (start / width) * width
-
-    # puts "start: #{start}, height: #{tree_height}, edge: #{edge}"
-    #
     distance = 0
 
     while next_tree >= edge
       distance += 1
-      # puts "...looking at #{next_tree}, #{data[next_tree][0]}"
       if data[next_tree][0] >= tree_height
         line_of_sight = false
-        # puts "...#{tree_height} blocked by #{data[next_tree][0]}"
         break
       end
       next_tree -= 1
-      # distance += 1
     end
 
     data[start][2] *= distance
@@ -80,17 +71,14 @@ class Forest
     next_tree = start + width
     distance = 0
 
-    # puts "start: #{start}, height: #{tree_height}"
     while next_tree < data.length
       distance += 1
-      # puts "...#{next_tree}"
       if data[next_tree][0] >= tree_height
         line_of_sight = false
         break
       end
 
       next_tree += width
-      # distance += 1
     end
 
     data[start][2] *= distance
@@ -113,7 +101,6 @@ class Forest
       end
 
       next_tree += 1
-      # distance += 1
     end
 
     data[start][2] *= distance
@@ -134,21 +121,13 @@ end
 def part_one(forest)
   forest.scan_forest
 
-  # (0...forest.height).each do |y|
-  #   # puts forest.data.slice(y * forest.width, forest.width).inspect
-  # end
-  # puts
   visible = forest.data.filter { |t| t[1] == true }
-  # puts visible.inspect
-  puts visible.length
+  puts "Trees: #{visible.length}"
 end
 
 def part_two(forest)
   forest.scan_forest
 
-  (0...forest.height).each do |y|
-    puts forest.data.slice(y * forest.width, forest.width).inspect
-  end
   distances = forest.data.map { |t| t[2] }.sort
-  puts distances.inspect
+  puts "Scenic score: #{distances.last}"
 end
