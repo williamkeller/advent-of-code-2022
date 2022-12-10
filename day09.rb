@@ -90,7 +90,7 @@ end
 
 
 def part_one(data)
-  rope = Rope.new
+  # rope = Rope.new
   head = Knot.new nil
   tail = Knot.new head
 
@@ -105,19 +105,14 @@ def part_one(data)
     when 'R'
       cmd[1].times { head.move(1, 0) ; tail.update_position }
     end
-
-    puts "#{head.x} #{head.y}"
   end
 
-  puts tail.spots.inspect
   puts tail.spots.length
 end
 
 def part_two(data)
   knots = []
-  knots << Knot.new(nil)
-
-  9.times { knots << Knot.new(knots.last) }
+  10.times { knots << Knot.new(knots.last) }
 
   data.each do |cmd|
     case cmd[0]
@@ -133,6 +128,5 @@ def part_two(data)
 
   end
 
-  puts knots[9].spots.inspect
   puts knots[9].spots.length
 end
