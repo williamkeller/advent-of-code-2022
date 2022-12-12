@@ -122,8 +122,6 @@ def part_two(data)
   restrictor = monkeys.map(&:test_amount).reduce(&:*)
   monkeys.each { |m| m.restrictor = restrictor }
 
-  puts "restrictor = #{restrictor}"
-
   (0...10000).each do |turn|
     monkeys.each do |monkey|
       monkey.turn do |item, dest|
@@ -132,10 +130,5 @@ def part_two(data)
     end
   end
 
-
-
-  counts = monkeys.map(&:inspect_count).sort.reverse
-  puts counts.join(',')
   puts monkeys.map(&:inspect_count).sort.reverse.slice(0, 2).reduce(&:*)
-
 end
